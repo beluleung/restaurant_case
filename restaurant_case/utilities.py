@@ -54,6 +54,7 @@ def restaurant_name_to_group_id(df, restaurant_names, clustering):
     df = df[df['group_id'].notnull()].sort_values(by=['group_id'])
     return df
 
+
 #Within cluster groups, calculate distance between each other, drop duplicates if distance less than 200m
 def split_by_geo_locations(cluster: pd.DataFrame):
     if len(cluster) < 2:
